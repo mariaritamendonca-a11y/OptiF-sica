@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óptica do Olho Humano | Física Simples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO SEMÂNTICO -->
+  <header class="header">
+    <div class="logo">
+      <h1>Óptica Humana 👁️</h1>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-list">
+        <li><a href="#conceito">Conceito</a></li>
+        <li><a href="#simulacao">Simulação</a></li>
+        <li><a href="#defeitos">Defeitos Visuais</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- Seção de Introdução -->
+    <section id="conceito" class="card">
+      <h2>Como o olho humano enxerga?</h2>
+      <p>
+        O olho humano funciona de maneira muito parecida com uma <strong>câmera fotográfica</strong>. 
+        A luz passa pela <em>córnea</em> e pelo <em>cristalino</em> (que funcionam como lentes convergentes) 
+        e projeta uma imagem focada e invertida na <em>retina</em> (que funciona como o sensor de fotos).
+      </p>
+    </section>
+
+    <!-- Seção Interativa com Simulador -->
+    <section id="simulacao" class="card">
+      <h2>Simulador de Foco Visual</h2>
+      <p>Clique nos botões para ajustar o foco da lente e ver como a luz chega até a retina:</p>
+      
+      <div class="interactive-area">
+        <div class="eye-graphic" id="eyeDisplay" tabindex="0" aria-live="polite">
+          <div class="light-ray" id="lightRay"></div>
+          <span id="statusText">Visão Normal: Imagem focada perfeitamente na retina.</span>
+        </div>
+
+        <div class="controls">
+          <button id="btnNormal" class="btn active">Visão Normal</button>
+          <button id="btnMiopia" class="btn">Miopia</button>
+          <button id="btnHipermetropia" class="btn">Hipermetropia</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Explicativa sobre os Defeitos -->
+    <section id="defeitos" class="card">
+      <h2>Principais Problemas de Visão</h2>
+      <div class="flex-container">
+        <article class="flex-item">
+          <h3>Miopia 👓</h3>
+          <p>O olho é mais "alongado". O ponto focal da imagem é formado <strong>antes</strong> da retina. Correção: Lentes Divergentes.</p>
+        </article>
+        <article class="flex-item">
+          <h3>Hipermetropia 🔍</h3>
+          <p>O olho é mais "curto". O ponto focal da imagem é formado <strong>depois</strong> da retina. Correção: Lentes Convergentes.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ SEMÂNTICO -->
+  <footer class="footer">
+    <p>Projeto Escolar de Física &bull; Desenvolvido com HTML5, CSS e JS</p>
+    <p><small>Entrega até 15/10 - Acessível e Responsivo</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
