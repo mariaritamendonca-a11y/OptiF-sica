@@ -1,0 +1,159 @@
+/* VARIÁVEIS DE CORES E PALETA AZUL/BRANCO (Com Alto Contraste) */
+:root {
+  --primary-blue: #0d47a1;
+  --secondary-blue: #1976d2;
+  --light-blue: #e3f2fd;
+  --bg-color: #f8f9fa;
+  --text-dark: #121212;
+  --white: #ffffff;
+}
+
+/* RESET E BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* CABEÇALHO COM FLEXBOX */
+.header {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  text-decoration: underline;
+  outline: 2px solid var(--white);
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--secondary-blue);
+}
+
+/* FLEXBOX PARA OS CARDS DE DEFEITOS */
+.flex-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.flex-item {
+  flex: 1;
+  background-color: var(--light-blue);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* SIMULADOR INTERATIVO */
+.interactive-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.eye-graphic {
+  width: 100%;
+  max-width: 500px;
+  height: 120px;
+  background-color: var(--light-blue);
+  border: 2px solid var(--primary-blue);
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: var(--secondary-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: var(--primary-blue);
+  outline: 3px solid #90caf9;
+}
+
+.btn.active {
+  background-color: var(--primary-blue);
+  font-weight: bold;
+}
+
+/* RODAPÉ SEMÂNTICO */
+.footer {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+/* RESPONSIVIDADE COM MEDIA QUERIES */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+}
